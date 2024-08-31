@@ -134,6 +134,9 @@ a{
     .btn{
         min-width: unset;
     }
+    .titulo{
+        font-size: 18px;
+    }
 }
 
 @media (max-width: 350px){
@@ -143,5 +146,8 @@ a{
     .share-btn{
         margin-left: 0;
         margin-top: 0.7rem;
+    }
+    .titulo{
+        font-size: 16px;
     }
 }
