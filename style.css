@@ -124,8 +124,8 @@ a{
         padding: 10px;
     }
     #qr-code{
-        width: 95vw;
-        height: 95vw;
+        width: 88vw;
+        height: 88vw;
     }
     #qr-code img, #qr-code canvas{
         max-width: 95vw !important;
@@ -135,7 +135,7 @@ a{
         min-width: unset;
     }
     .titulo{
-        font-size: 18px;
+        font-size: 21px;
     }
 }
 
@@ -148,6 +148,6 @@ a{
         margin-top: 0.7rem;
     }
     .titulo{
-        font-size: 16px;
+        font-size: 21px;
     }
 }
