@@ -1,51 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/logo.PNG" type="image/x-icon" sizes="64x64" >
+    <meta name="theme-color" content="#11131a">
+    <link rel="shortcut icon" href="img/logo.PNG" type="image/x-icon" sizes="64x64">
     <link rel="stylesheet" href="style.css">
-    <title>QR code creator</title>
+    <title>Criador de QR Code</title>
 </head>
-
 <body>
+    <main class="app-shell">
+        <section class="generator-card" aria-labelledby="page-title">
+            <header class="hero">
+                <h1 class="titulo" id="page-title">Crie o seu <span>QR Code</span></h1>
+                <p class="subtitle">Personalize, visualize e salve em poucos passos.</p>
+            </header>
 
-    <section>
-        <h1 class="titulo">Crie o seu <span style="color: rgb(106, 43, 255);">QR Code</span></h1>
-        <div class="row">
-            <input type="color" class="light" value="#ffffff">
-            <input type="color" class="dark">
-            <select class="sizes">
-                <option value="100">100×100</option>
-                <option value="200">200×200</option>
-                <option value="300">300×300</option>
-                <option selected value="400">400×400</option>
-                <option value="500">500×500</option>
-                <option value="600">600×600</option>
-                <option value="700">700×700</option>
-                <option value="800">800×800</option>
-                <option value="900">900×900</option>
-                <option value="1000">1000×1000</option>
-            </select>
-        </div>
-        <input type="text" class="qr-text" placeholder="Insira o link do QR Code">
-        <div id="qr-code"></div>
-        <div class="action-container">
-            <a href="#" class="download btn" download="QRCode">
-                <span>Download</span>
-                <!-- <img src="download.svg" alt=""> -->
-            </a>
-            <button class="btn share-btn">
-                <span>Compartilhar</span>
-                <!-- <img src="share.svg" alt=""> -->
-            </button>
-        </div>
-    </section>
+            <div class="workspace">
+                <div class="editor-panel">
+                    <label class="text-control">
+                        <span>Conteúdo</span>
+                        <input type="text" class="qr-text" placeholder="Cole um link ou digite um texto">
+                    </label>
+
+                    <div class="row">
+                        <label class="control color-control">
+                            <span>Fundo</span>
+                            <input type="color" class="light" value="#ffffff" aria-label="Cor de fundo">
+                        </label>
+                        <label class="control color-control">
+                            <span>Código</span>
+                            <input type="color" class="dark" aria-label="Cor do código">
+                        </label>
+                        <label class="control size-control">
+                            <span>Tamanho</span>
+                            <select class="sizes" aria-label="Tamanho do QR Code">
+                                <option value="100">100×100</option>
+                                <option value="200">200×200</option>
+                                <option value="300">300×300</option>
+                                <option selected value="400">400×400</option>
+                                <option value="500">500×500</option>
+                                <option value="600">600×600</option>
+                                <option value="700">700×700</option>
+                                <option value="800">800×800</option>
+                                <option value="900">900×900</option>
+                                <option value="1000">1000×1000</option>
+                            </select>
+                        </label>
+                    </div>
+
+                </div>
+
+                <div class="preview" aria-label="Pré-visualização do QR Code">
+                    <span class="preview-label">Pré-visualização</span>
+                    <div id="qr-code"></div>
+                </div>
+
+                <div class="action-container">
+                    <a href="#" class="download btn" download="QRCode"><span>Baixar QR Code</span></a>
+                    <button type="button" class="btn share-btn"><span>Compartilhar</span></button>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="script.js"></script>
 </body>
-
 </html>
